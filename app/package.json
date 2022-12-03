@@ -1,0 +1,11 @@
+{
+  "name": "gluequest2",
+  "version": "1.1.1",
+  "description": "Run around and drink some glue",
+  "main": "index.js",
+  "scripts": {
+    "test": "electron ."
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+
+			#fugma {
+				margin: unset;
+			}
+
+			#gamearea {
+				width: 640px;
+				height: 480px;
+				margin: auto;
+			}
+
+			#gameContainer {
+				margin: auto;
+				width: 640px;
+			}
+
+			#toparea {
+				display: flex;
+				flex-flow: row;
+				color: black;
+				align-items: center;
+				justify-content: space-between;
+			}
+
+			#scoreArea {
+				background: black;
+				color: white;
+				display: -webkit-inline-box;
+			}
+
+			#score {
+				text-align: left;
+			}
+
+			p.score {
+				padding-right: 0px;
+			}
+
+			#Gicon {
+				padding-top: 5px;
+			}
+
+			#helptextboxopen {
+				font-size: 25px;
+				cursor: pointer;
+				border-style: solid;
+				border-width: 2px;
+				width: 37px;
+				height: 37px;
+			}
+
+			#helpbox {
+				display: none;
+				position: fixed;
+				width: 640px;
+				height: 550px;
+				text-align: center;
+				background-color: #338f41;
+				color: black;
+				border-style: solid;
+				z-index: 1;
+			}
+
+			#helptextbox {
+				width: 634px;
+				margin: auto;
+				border-style: solid;
+			}
+
+			.invert {
+				filter: invert(100%);
+			}
+
+			.collect {
+				filter: blur(5px);
+			}
+
+			p {
+				text-align: center;
+				margin: auto;
+				padding: 5px;
+			}
+
+			a {
+				cursor: pointer;
+			}
+
+			area {
+				cursor: pointer;
+			}
+
+			area.help{
+				cursor: help;
+			}
+
+			area.none{
+				cursor: not-allowed;
+			}
+
+			area.hidden {
+				cursor: default;
+			}
+
+		</style>
+
+	</head>
+
+	<body id="fugma">
+		<div id="helpbox" onclick="document.getElementById('helpbox').style.display = 'none'">
+			<h1>Glue Quest 2</h1>
+			<h3>how to play</h3>
+			<p>Wander around in search of glue to consume<br>
+			<br>in most areas you can go to the previous area by clicking in the bottom middle area<br></p>
+			<p>To close this click anywhere on this box</p><br><br>
+			<p><a onclick="document.getElementById('fugma').style.margin = 'revert'">I'm not playing on Itch.io reset the margins please</a></p>
+		</div> <!-- helpbox, this box is for telling the user how to play the game -->
+
+		<div id="gameContainer">
+			<div id="toparea">
+				<div id="scoreArea">
+					<!-- Write the score here and keep it in the top left area -->
+					<p id="score" class="score"></p>
+					<img src="res/GlueIcon.png" id="Gicon" alt="Glue Icon" width="32px" height="32px">
+				</div> <!-- scorearea -->
+
+				<div id="helptextboxopen" onclick="document.getElementById('helpbox').style.display = 'block'">
+					<p>?</p>
+				</div><!-- helptextboxopen -->
+			</div> <!-- toparea, this box is for holding the Glue counter and the button to open the help box -->
+
+			<div id="gamearea">
+				<img src="res/map1.png" alt="gamearea" usemap="#imgmap" width="640px" height="480px">
+				<map name="imgmap">
+				<area shape="rect" coords="83,110,126,165" title="Home" onclick="goplace(1)">
+				<!-- <area shape="rect" coords="226,6,434,158" title="Glue Factory" onclick="goplace(2)">
+				<area shape="rect" coords="89,336,203,454" title="Glue Strip Club" onclick="goplace(4)">
+				<area shape="rect" coords="69,234,161,297" title="Glue Force Armory" onclick="goplace(3)">
+				<area shape="rect" class="none" coords="520,228,625,283" title="Glue Farm House" onclick="goplace(5)">
+				<area shape="rect" class="help" coords="546,397,600,451" title="Harvest Ready Glue Field" onclick="helpthing(50)"> -->
+			</map>
+			</div><!-- gamearea, this is where the game gets played -->
+			<!-- bottom area starts here -->
+			<div id="helptextbox">
+				<p id="helptext">Gotta find some Glue to slurp down</p>
+			</div> <!-- helptextbox, this text changes as the player clicks on objects they encounter in the game -->
+		</div><!-- gameContainer, this box holds the gamearea and the helptextbox  -->
+
+		<script type="text/javascript" src="glueQuest2.js"></script>
+	</body>
+</html>
