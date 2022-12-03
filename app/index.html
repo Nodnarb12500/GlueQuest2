@@ -108,7 +108,6 @@
 		</style>
 
 	</head>
-
 	<body id="fugma">
 		<div id="helpbox" onclick="document.getElementById('helpbox').style.display = 'none'">
 			<h1>Glue Quest 2</h1>
@@ -122,7 +121,6 @@
 		<div id="gameContainer">
 			<div id="toparea">
 				<div id="scoreArea">
-					<!-- Write the score here and keep it in the top left area -->
 					<p id="score" class="score"></p>
 					<img src="res/GlueIcon.png" id="Gicon" alt="Glue Icon" width="32px" height="32px">
 				</div> <!-- scorearea -->
@@ -136,18 +134,13 @@
 				<img src="res/map1.png" alt="gamearea" usemap="#imgmap" width="640px" height="480px">
 				<map name="imgmap">
 				<area shape="rect" coords="83,110,126,165" title="Home" onclick="goplace(1)">
-				<!-- <area shape="rect" coords="226,6,434,158" title="Glue Factory" onclick="goplace(2)">
-				<area shape="rect" coords="89,336,203,454" title="Glue Strip Club" onclick="goplace(4)">
-				<area shape="rect" coords="69,234,161,297" title="Glue Force Armory" onclick="goplace(3)">
-				<area shape="rect" class="none" coords="520,228,625,283" title="Glue Farm House" onclick="goplace(5)">
-				<area shape="rect" class="help" coords="546,397,600,451" title="Harvest Ready Glue Field" onclick="helpthing(50)"> -->
 			</map>
-			</div><!-- gamearea, this is where the game gets played -->
-			<!-- bottom area starts here -->
+			</div> <!-- gamearea, this is where the game gets played -->
+
 			<div id="helptextbox">
 				<p id="helptext">Gotta find some Glue to slurp down</p>
-			</div> <!-- helptextbox, this text changes as the player clicks on objects they encounter in the game -->
-		</div><!-- gameContainer, this box holds the gamearea and the helptextbox  -->
+			</div>
+		</div>
 
 		<script type="text/javascript" src="glueQuest2.js"></script>
 	</body>
